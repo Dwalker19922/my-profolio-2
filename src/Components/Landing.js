@@ -56,7 +56,7 @@ function Landing(props) {
       overflow: 'hidden'
     },
     description:{
-      marginBottom:"90%"
+      marginBottom:"50%"
     }
 
   })

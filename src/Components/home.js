@@ -13,7 +13,7 @@ export default function HomePg(props) {
         if(scroll===true){
         setTimeout(()=>{
             setStat(true)
-        },1000)}
+        },2000)}
     })
     const window = props.window
     return (
