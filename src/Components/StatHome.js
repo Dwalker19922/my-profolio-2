@@ -71,7 +71,7 @@ const timerFWD = ()=>{
             alignItems: 'center',
             borderRadius:"20%",
             maxWidth:"140px",
-            minWidth:"120px",
+            minWidth:"40px",
             marginTop:"5%"
         },
         main: {

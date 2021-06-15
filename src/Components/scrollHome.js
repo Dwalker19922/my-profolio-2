@@ -11,6 +11,7 @@ export default function ScrollHome(props) {
 
 
     const defaultValue = 5
+
     const maxDist = 2
     const [slider, setSlider] = useState(false)
     const [distance, setDistance] = useState(defaultValue)
@@ -58,7 +59,7 @@ export default function ScrollHome(props) {
             alignItems: 'center',
             borderRadius: "20%",
             maxWidth: "140px",
-            minWidth: "120px"
+            minWidth: "70px"
         },
         main: {
             width: `${window.width}px`
@@ -80,8 +81,7 @@ export default function ScrollHome(props) {
         <div className={props.classes}>
             <div className={classes.container}>
                 <div className={classes.main}>
-                    <p>My name is Daniel Walker</p>
-                    <h1>scroll</h1>
+                    <h1>WELCOME!</h1>
                     <a href='https://www.freepik.com/vectors/background'>Basckground vector created by liuzishan - www.freepik.com</a>
                 </div>
                 <div className={classes.sidebar}>
