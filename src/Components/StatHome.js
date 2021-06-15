@@ -13,17 +13,15 @@ export default function StatHome(props) {
     const [slider, setSlider] = useState(false)
     const [marquee,setMarquee] = useState(-440)
     const [distance,setDistance] =useState(defaultValue)
-
+    const transparency =  (marquee + 440)/3
+    console.log(transparency)
     const runMarquee = ()=>{
         if(marquee<-120){
 
         setTimeout(() =>{
-        setMarquee(marquee+1)
+        setMarquee(marquee+2)
 
     },40)}
-    else{
-        setMarquee(-440)
-    }
 
 }
 runMarquee()
@@ -59,7 +57,6 @@ const timerFWD = ()=>{
     }
     timerBack()
     timerFWD()
-    const width = 100
     const styled = makeStyles({
         sidebar: {
             display: 'flex',
@@ -75,12 +72,13 @@ const timerFWD = ()=>{
             marginTop:"5%"
         },
         main: {
-            width: `${width}%`
+            width: `100%`
         },
         container: {
             display: 'flex',
             flexDirection: 'row',
             width: `${distance+98}vw`,
+            height: "80%"
         },
         toggle:{
             display: slider===true?"block":"none"
@@ -99,6 +97,13 @@ const timerFWD = ()=>{
               marginRight:"-300%",
               marginLeft:`${marquee}%`,
 
+          },
+          info:{
+              backgroundColor:"grey",
+              padding:"10%",
+              width:"40%",
+              height:"80%",
+              opacity:`${transparency}%`
           }
     })
 //  -440  -120
@@ -112,8 +117,10 @@ const timerFWD = ()=>{
                     </div>
             <div className={classes.container}>
                 <div className={classes.main}>
+                    <div className={classes.info}/>
                   
                     <div className={classes.intro}>
+                    <a href='https://www.freepik.com/vectors/background'>Basckground vector created by liuzishan - www.freepik.com</a>
                     
                     </div>
                     
@@ -128,7 +135,7 @@ const timerFWD = ()=>{
                 </div>
             </div>
 
-            <a href='https://www.freepik.com/vectors/background'>Basckground vector created by liuzishan - www.freepik.com</a>
+            
         </div>
    
     )
