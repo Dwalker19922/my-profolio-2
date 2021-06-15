@@ -54,6 +54,9 @@ function Landing(props) {
       width: `${windowDimensions.width}px`,
       height: `${windowDimensions.height}px`,
       overflow: 'hidden'
+    },
+    description:{
+      marginBottom:"90%"
     }
 
   })
@@ -72,13 +75,14 @@ function Landing(props) {
       <div className={classes.app}>
 
         <div className="coverInfo">
+        <a className="ReqAtt" href='https://www.freepik.com/vectors/background'>Background vector created by liuzishan - www.freepik.com</a>
           <header className="App-header">
             <h1 className="Name"> Daniel Walker</h1>
             <h2 className="title">Full Stack Web Developer</h2>
-            <p className="coverDescription">click below to view my portfolio</p>
+            <p className={classes.description}> click below to view my portfolio</p>
           </header>
           <TDiv onClick={setState} />
-          <a className="ReqAtt" href='https://www.freepik.com/vectors/background'>Background vector created by liuzishan - www.freepik.com</a>
+          
         </div>
       </div>
 

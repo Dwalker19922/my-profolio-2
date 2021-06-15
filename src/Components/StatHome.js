@@ -101,9 +101,16 @@ const timerFWD = ()=>{
           info:{
               backgroundColor:"grey",
               padding:"10%",
-              width:"40%",
+              width:"60%",
               height:"80%",
-              opacity:`${transparency}%`
+              opacity:`${transparency}%`,
+              borderRadius:"10%",
+              maxHeight:"500px",
+              maxWidth:"500px"
+          },
+          infoOne:{
+            color: "black",
+            fontSize:"2vw"
           }
     })
 //  -440  -120
@@ -117,7 +124,15 @@ const timerFWD = ()=>{
                     </div>
             <div className={classes.container}>
                 <div className={classes.main}>
-                    <div className={classes.info}/>
+                    <div className={classes.info}>
+                        <p className={classes.infoOne}>welcome to my page</p>
+                        <p>Info about me blah blah blah.....</p>
+                        <p>Info about me blah blah blah.....</p>
+                        <p>Info about me blah blah blah.....</p>
+                        <p>Info about me blah blah blah.....</p>
+                        <p>Link to resume</p>
+                        <p>Link to LinkedIn</p>
+                        </div>
                   
                     <div className={classes.intro}>
                     <a href='https://www.freepik.com/vectors/background'>Basckground vector created by liuzishan - www.freepik.com</a>
