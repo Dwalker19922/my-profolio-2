@@ -93,6 +93,7 @@ const timerFWD = ()=>{
            width: `100vw`,
            height: `100vh`,
            paddingTop:"5%",
+           paddingBottom:"340px",
            overflow: "hidden"
           },
           name: {

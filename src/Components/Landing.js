@@ -31,11 +31,11 @@ function Landing(props) {
 
   const [distance, setDistance] = useState(0)//sets distance to travel and starting point
   const [scroll, setScroll] = useState(false)//sets action boolean
-  const [maxDistance, setMD] = useState(-windowDimensions.height)
-  const trip=distance===maxDistance-2||distance===maxDistance?true:false
+  const [maxDistance, setMD] = useState(-Math.round(windowDimensions.height/10)*10)
+  const trip=distance===maxDistance?true:false
   console.log(trip,distance,maxDistance)
   props.setTC(trip)
-  
+
 
   const styled = makeStyles({
     app: {
