@@ -31,7 +31,7 @@ function Landing(props) {
 
   const [distance, setDistance] = useState(0)//sets distance to travel and starting point
   const [scroll, setScroll] = useState(false)//sets action boolean
-  const [maxDistance, setMD] = useState(-Math.round(windowDimensions.height/10)*10)
+  const [maxDistance, setMD] = useState(-Math.round((windowDimensions.height/10)*10)-800)
   const trip=distance===maxDistance?true:false
   console.log(trip,distance,maxDistance)
   props.setTC(trip)
@@ -48,6 +48,7 @@ function Landing(props) {
       width: `${windowDimensions.width}px`,
       height: `${windowDimensions.height + 100}px`,
       display: distance === maxDistance - 2 ? "none" : "block",
+      paddingBottom:"30%"
      
     },
     home: {
@@ -63,6 +64,12 @@ function Landing(props) {
     },
     description:{
       marginBottom:"50%"
+    },
+    splash:{
+      display:"inline-block",
+      position:"absolute",
+      top:"0",
+      left:"0"
     }
 
   })
@@ -78,7 +85,7 @@ function Landing(props) {
   const classes = styled();
 
   return (
-    <>
+    <div className={classes.splash}>
       <div className={classes.app}>
 
         <div className="coverInfo">
@@ -97,7 +104,7 @@ function Landing(props) {
 
     
 
-  </>
+      </div>
   );
 }
 

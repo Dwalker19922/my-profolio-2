@@ -143,12 +143,15 @@ const timerFWD = ()=>{
               fontSize:"1.2vh",
               fontWeight:"bold",
             wordSpacing:"2px"
+          },
+          hme: {
+              display:"inline-block",
           }
     })
 
     const classes = styled()
     return (
-
+        <div className={classes.hme}>
         <div className={classes.home}> 
           <div className={classes.name}>
                     <h1>I am Daniel Walker</h1>
@@ -184,6 +187,6 @@ const timerFWD = ()=>{
 
             
         </div>
-   
+        </div>
     )
 }

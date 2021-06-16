@@ -8,8 +8,9 @@ const [staticPage,setStaticPage]=useState(false)
 const [transitionCompleate, setTransitionCompleate]=useState(false)
   return (
     <>
-    {transitionCompleate ===true? null:<Landing setTC={setTransitionCompleate} setStat={setStaticPage} stat={staticPage}/>}
-   {staticPage===true? <StatHome stat={staticPage}/>:null}
+    <StatHome stat={staticPage}/>
+    <Landing setTC={setTransitionCompleate} setStat={setStaticPage} stat={staticPage}/>
+   
    
 
   </>
