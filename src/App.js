@@ -4,11 +4,11 @@ import Landing from "./Components/Landing"
 import{useState} from "react"
 import StatHome from "./Components/StatHome"
 function App() {
-const [StaticPage,setStaticPage]=useState(false)
+const [staticPage,setStaticPage]=useState(false)
   return (
     <>
     <Route path="/">
-    {StaticPage===false?<Landing setStat={setStaticPage} stat={StaticPage}/>:<StatHome/>}
+    {staticPage===false?<Landing setStat={setStaticPage} stat={staticPage}/>:<StatHome stat={staticPage}/>}
     </Route>
   </>
   );

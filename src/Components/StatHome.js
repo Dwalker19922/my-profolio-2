@@ -13,13 +13,13 @@ export default function StatHome(props) {
     const [slider, setSlider] = useState(false)
     const [marquee,setMarquee] = useState(-440)
     const [distance,setDistance] =useState(defaultValue)
-    const transparency =  (marquee + 440)/3
+    const transparency =  (marquee + 440)*2
     console.log(transparency)
     const runMarquee = ()=>{
         if(marquee<-120){
 
         setTimeout(() =>{
-        setMarquee(marquee+2)
+        setMarquee(marquee+.5)
 
     },40)}
 
@@ -106,7 +106,8 @@ const timerFWD = ()=>{
               opacity:`${transparency}%`,
               borderRadius:"10%",
               maxHeight:"500px",
-              maxWidth:"500px"
+              maxWidth:"500px",
+              marginLeft:"10%"
           },
           infoOne:{
             color: "black",
