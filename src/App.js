@@ -1,5 +1,5 @@
 import './App.css';
-import { Route } from "react-router-dom"
+
 import Landing from "./Components/Landing"
 import{useState} from "react"
 import StatHome from "./Components/StatHome"
@@ -9,7 +9,7 @@ const [transitionCompleate, setTransitionCompleate]=useState(false)
   return (
     <>
     {transitionCompleate ===true? null:<Landing setTC={setTransitionCompleate} setStat={setStaticPage} stat={staticPage}/>}
-   {staticPage==true? <StatHome stat={staticPage}/>:null}
+   {staticPage===true? <StatHome stat={staticPage}/>:null}
    
 
   </>

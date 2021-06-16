@@ -5,7 +5,7 @@ import LandingImage from "../img/Vector_2646.jpg"
 import { makeStyles } from '@material-ui/core/styles';
 import TDiv from "./ToggleArrow";
 import { getWindowDimensions, activateScroll } from "./LandingScrollFunction";
-import { Route } from "react-router-dom"
+
 
 
 const preload = homeImg
