@@ -92,7 +92,8 @@ const timerFWD = ()=>{
             backgroundSize: "cover",
            width: `100vw`,
            height: `100vh`,
-           paddingTop:"5%"
+           paddingTop:"5%",
+           overflow: "hidden"
           },
           name: {
               marginRight:"-300%",

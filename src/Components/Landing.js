@@ -40,7 +40,6 @@ function Landing(props) {
   const styled = makeStyles({
     app: {
       textAlign: "center",
-
       backgroundRepeat: "no-repeat",
       backgroundImage: `url(${LandingImage})`,
       color: "white",
@@ -48,7 +47,8 @@ function Landing(props) {
       marginTop: `${distance}px`,
       width: `${windowDimensions.width}px`,
       height: `${windowDimensions.height + 100}px`,
-      display: distance === maxDistance - 2 ? "none" : "block"
+      display: distance === maxDistance - 2 ? "none" : "block",
+     
     },
     home: {
       textAlign: "center",
