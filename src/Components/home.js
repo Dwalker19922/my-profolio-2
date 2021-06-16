@@ -7,7 +7,6 @@ export default function HomePg(props) {
     const stat=props.stat
     const setStat=props.setStat
 
-    
     useEffect(()=>{
        
         if(scroll===true){
@@ -15,6 +14,7 @@ export default function HomePg(props) {
             setStat(true)
         },1000)}
     })
+    
     const window = props.window
     return (
  <>
