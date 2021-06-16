@@ -6,12 +6,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import TDiv from "./ToggleArrow";
 import { getWindowDimensions, activateScroll } from "./LandingScrollFunction";
 import { Route } from "react-router-dom"
-import HomePg from "./home"
+
 
 const preload = homeImg
 localStorage.setItem("preloadImg", preload)
 const home = localStorage.getItem("preloadImg")
+
+
 function Landing(props) {
+  console.log(props)
   const { push } = useHistory()
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
   useEffect(() => {
@@ -29,6 +32,9 @@ function Landing(props) {
   const [distance, setDistance] = useState(0)//sets distance to travel and starting point
   const [scroll, setScroll] = useState(false)//sets action boolean
   const [maxDistance, setMD] = useState(-windowDimensions.height)
+  const trip=distance===maxDistance-2||distance===maxDistance?true:false
+  console.log(trip,distance,maxDistance)
+  props.setTC(trip)
   
 
   const styled = makeStyles({
@@ -62,6 +68,7 @@ function Landing(props) {
   })
 
   const setState = () => {
+    props.setStat(true)
     setScroll(true)
     return activateScroll(distance, setDistance, scroll, maxDistance)
 
@@ -89,9 +96,7 @@ function Landing(props) {
       {scroll === true&&distance===-1000 ? <></> :push("/home")}
 
     
-    <Route exact path="/home">
-    <HomePg push={push} scroll={scroll} window={windowDimensions} distance={distance} classes={classes} setStat={props.setStat} stat={props.stat}/>
-  </Route>
+
   </>
   );
 }

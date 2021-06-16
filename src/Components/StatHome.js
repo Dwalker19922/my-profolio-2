@@ -16,7 +16,6 @@ export default function StatHome(props) {
     const [marquee,setMarquee] = useState(-440)
     const [distance,setDistance] =useState(defaultValue)
     const transparency =  (marquee + 440)*2
-    console.log(transparency)
     const runMarquee = ()=>{
         if(marquee<maxMarquee){
 

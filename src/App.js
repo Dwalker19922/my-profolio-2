@@ -5,11 +5,13 @@ import{useState} from "react"
 import StatHome from "./Components/StatHome"
 function App() {
 const [staticPage,setStaticPage]=useState(false)
+const [transitionCompleate, setTransitionCompleate]=useState(false)
   return (
     <>
-    <Route path="/">
-    {staticPage===false?<Landing setStat={setStaticPage} stat={staticPage}/>:<StatHome stat={staticPage}/>}
-    </Route>
+    {transitionCompleate ===true? null:<Landing setTC={setTransitionCompleate} setStat={setStaticPage} stat={staticPage}/>}
+   {staticPage==true? <StatHome stat={staticPage}/>:null}
+   
+
   </>
   );
 }
